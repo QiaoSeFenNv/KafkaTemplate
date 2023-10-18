@@ -40,6 +40,7 @@
         <springfox.version>3.0.0</springfox.version>
         <spring.boot.starter.validation.version>2.7.0</spring.boot.starter.validation.version>
         <okhttp.envent.version>2.5.0</okhttp.envent.version>
+        <jpa.version>2.7.0</jpa.version>
     </properties>
 
     <dependencyManagement>
@@ -104,6 +105,13 @@
                 <groupId>com.launchdarkly</groupId>
                 <artifactId>okhttp-eventsource</artifactId>
                 <version>${okhttp.envent.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${jpa.version}</version>
             </dependency>
 
         </dependencies>

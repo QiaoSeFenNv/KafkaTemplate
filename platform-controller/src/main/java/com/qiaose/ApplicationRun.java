@@ -12,6 +12,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.LinkedList;
 
 /**
  * @ClassName: ApplicationRun
@@ -48,5 +49,4 @@ public class ApplicationRun extends SpringBootServletInitializer {
                 "External访问网址: \thttp://" + ip + ":" + port + path + "/swagger-ui/index.html" +"\n\t" +
                 "----------------------------------------------------------");
     }
-
 }
