@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class KafkaDataBaseConsumer {
 
-    private WikimediaDataRepository wikimediaDataRepository;
+    private final WikimediaDataRepository wikimediaDataRepository;
 
     public KafkaDataBaseConsumer(WikimediaDataRepository wikimediaDataRepository) {
         this.wikimediaDataRepository = wikimediaDataRepository;

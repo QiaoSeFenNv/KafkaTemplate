@@ -1,0 +1,32 @@
+server:
+  port: 8180
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: QWEasd123456!
+    url: jdbc:mysql://127.0.0.1/code_test_platform?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: root
+    hikari:
+      connection-timeout: 600
+      max-lifetime: 550
+
+
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    topic:
+      name: order_topics
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    bootstrap-servers: 192.168.249.128:9092
+
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: com.qiaose.entity.*

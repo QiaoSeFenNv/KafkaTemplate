@@ -29,6 +29,9 @@
         <module>platform-controller-producer</module>
         <module>platform-controller-consumer</module>
         <module>platform-utils</module>
+        <module>order-service</module>
+        <module>stock-service</module>
+        <module>email-service</module>
     </modules>
 
     <properties>
