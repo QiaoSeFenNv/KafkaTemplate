@@ -1,17 +1,25 @@
 package com.qiaose;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.common.serialization.Serdes;
+import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.StreamsBuilder;
+import org.apache.kafka.streams.StreamsConfig;
+import org.apache.kafka.streams.kstream.Consumed;
+import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.Produced;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
-import org.springframework.util.StringUtils;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName: ApplicationRun
@@ -46,4 +54,5 @@ public class ApplicationRun extends SpringBootServletInitializer {
                 "External访问网址: \thttp://" + ip + ":" + port + path + "/swagger-ui/index.html" +"\n\t" +
                 "----------------------------------------------------------");
     }
+
 }
