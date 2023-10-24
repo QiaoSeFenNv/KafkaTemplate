@@ -4,6 +4,7 @@ package com.qiaose.kafka;
 
 import com.qiaose.entity.kafka.User;
 import lombok.extern.slf4j.Slf4j;
+import lombok.var;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -42,9 +43,10 @@ public class KafkaConsumer {
         Map<String, String> pros = new HashMap<>();
         StreamsConfig streamsConfig = new StreamsConfig(pros);
 
-        KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), streamsConfig);
+        try (KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(), streamsConfig)) {
 
-        kafkaStreams.start();
+            kafkaStreams.start();
+        }
 
 
     }
