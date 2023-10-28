@@ -23,12 +23,11 @@ spring:
           json:
             trusted:
               packages: com.qiaose.entity.*
-    #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
+          value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
 
     bootstrap-servers: 192.168.249.128:9092
 

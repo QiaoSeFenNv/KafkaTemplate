@@ -1,5 +1,8 @@
 package com.qiaose;
 
+import cn.hutool.core.lang.tree.Tree;
+import cn.hutool.core.lang.tree.TreeNode;
+import io.swagger.v3.oas.models.links.Link;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +15,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.*;
 
 /**
  * @ClassName: ApplicationRun
@@ -44,8 +48,8 @@ public class ApplicationRun extends SpringBootServletInitializer {
                 "Application  is running! Access URLs:\n\t" +
                 "Local访问网址: \t\thttp://localhost:" + port + path + "\n\t" +
                 "External访问网址: \thttp://" + ip + ":" + port + path + "\n\t" +
-                "Local Swagger2访问网址: \t\thttp://localhost:" + port + path+ "/swagger-ui/index.html " + "\n\t" +
-                "External访问网址: \thttp://" + ip + ":" + port + path + "/swagger-ui/index.html" +"\n\t" +
+                "Local Swagger2访问网址: \t\thttp://localhost:" + port + path + "/swagger-ui/index.html " + "\n\t" +
+                "External访问网址: \thttp://" + ip + ":" + port + path + "/swagger-ui/index.html" + "\n\t" +
                 "----------------------------------------------------------");
     }
 

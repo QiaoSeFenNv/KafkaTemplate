@@ -18,7 +18,13 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     topic:
       name: order_topics
-#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    properties:
+      security:
+        protocol: SASL_PLAINTEXT
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: 'org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="123456";'
     bootstrap-servers: 192.168.249.128:9092
 
 

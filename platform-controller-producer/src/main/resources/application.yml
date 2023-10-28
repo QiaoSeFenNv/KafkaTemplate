@@ -21,9 +21,9 @@ spring:
     bootstrap-servers: 192.168.249.128:9092
 
 
-mvc:
-  pathmatch:
-    matching-strategy: ant_path_matcher
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 mybatis:
   mapper-locations: classpath*:mapper/**/*Mapper.xml

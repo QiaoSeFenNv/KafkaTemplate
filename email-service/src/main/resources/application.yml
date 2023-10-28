@@ -25,7 +25,12 @@ spring:
         json:
           trusted:
             packages: com.qiaose.entity.*
-    #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      security:
+        protocol: SASL_PLAINTEXT
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: 'org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="123456";'
     bootstrap-servers: 192.168.249.128:9092
 
 
